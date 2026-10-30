@@ -90,9 +90,14 @@ FOOD_DATA = [
     {"Category": "Beverages & Sweets", "Food Item": "Extra Virgin Olive Oil", "Portion Weight (g)": 14, "Portion Type": "1 Tablespoon", "Calories (kcal)": 119, "Carbs/Sugar (g)": 0.0, "GI": 0, "Sodium (mg)": 0, "Potassium (mg)": 0, "Sat Fat (g)": 1.9, "Purine Level": "Zero", "Vitamins & Nutrients": "Oleic Acid, Polyphenols (AHA Approved)", "HbA1c Status": "Allowed", "Uric Acid Status": "Allowed", "Cholesterol Status": "Allowed", "Hypertension Status": "Allowed", "Overall Suitability": "Allowed"}
 ]
 
-@st.cache_data
 def load_database():
-    return pd.DataFrame(FOOD_DATA)
+    df = pd.DataFrame(FOOD_DATA)
+    # Guarantee key columns exist even if old cached data is loaded
+    if "Portion Type" not in df.columns:
+        df["Portion Type"] = "Standard Portion"
+    if "Hypertension Status" not in df.columns:
+        df["Hypertension Status"] = "Allowed"
+    return df
 
 df_db = load_database()
 
@@ -172,7 +177,7 @@ with tab_log:
         st.markdown("💡 **Portion Input Mode:**")
         p_mode = st.radio("Portion Mode", ["Estimated Size (No Scale)", "Custom Grams"], horizontal=True)
         base_g = float(sel_row["Portion Weight (g)"])
-        def_label = sel_row["Portion Type"]
+        def_label = sel_row["Portion Type"] if "Portion Type" in sel_row else "Standard Portion"
         
         if p_mode == "Estimated Size (No Scale)":
             p_scale = st.select_slider(
@@ -194,7 +199,9 @@ with tab_log:
     item_sodium = round(sel_row["Sodium (mg)"] * mult, 1)
     item_potassium = round(sel_row["Potassium (mg)"] * mult, 1)
     suitability = sel_row["Overall Suitability"]
-    hyp_status = sel_row["Hypertension Status"]
+    hyp_status = sel_row["Hypertension Status"] if "Hypertension Status" in sel_row else "Allowed"
+    uric_status = sel_row["Uric Acid Status"] if "Uric Acid Status" in sel_row else "Allowed"
+    chol_status = sel_row["Cholesterol Status"] if "Cholesterol Status" in sel_row else "Allowed"
 
     st.markdown("#### 🛡️ Pre-Eat Warning:")
     w1, w2 = st.columns([3, 1])
@@ -204,7 +211,7 @@ with tab_log:
         elif suitability == "Acceptable":
             st.warning(f"🟡 **Moderate Portion Caution** — Portion control needed. (Hypertension: {hyp_status})")
         else:
-            st.error(f"🔴 **AVOID / High Risk** — Fails health targets! (Uric Acid: {sel_row['Uric Acid Status']}, Cholesterol: {sel_row['Cholesterol Status']})")
+            st.error(f"🔴 **AVOID / High Risk** — Fails health targets! (Uric Acid: {uric_status}, Cholesterol: {chol_status})")
             
     with w2:
         if st.button("➕ Log Food Intake", use_container_width=True):
