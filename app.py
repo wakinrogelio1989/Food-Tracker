@@ -15,8 +15,8 @@ st.set_page_config(
 
 # Multi-User Accounts
 USERS = {
-    "User 1 (Alex)": "user1pass",
-    "User 2 (Maria)": "user2pass",
+    "Rogee": "1989",
+    "Rey": "Reign",
     "User 3 (John)": "user3pass",
     "User 4 (Sarah)": "user4pass"
 }
