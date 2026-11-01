@@ -1,3 +1,4 @@
+import os
 import urllib.parse
 import urllib.request
 import json
@@ -15,8 +16,52 @@ st.set_page_config(
 
 # Multi-User Accounts
 USERS = {
-    "Rogee": "1989",
-    "Rey": "Reign",
+    "User 1 (Alex)": "user1pass",
+    "User 2 (Maria)": "user2pass",
+    "User 3 (John)": "user3pass",
+    "User 4 (Sarah)": "user4pass"
+}
+
+# Master Medical Food Database
+# Load Master Food Database from External Excel / CSV File
+@st.cache_data(ttl=10)
+def load_base_database():
+    excel_path = "food_database.xlsx"
+    csv_path = "food_database.csv"
+    
+    if os.path.exists(excel_path):
+        try:
+            return pd.read_excel(excel_path)
+        except Exception as e:
+            st.error(f"Error reading {excel_path}: {e}")
+    if os.path.exists(csv_path):
+        try:
+            return pd.read_csv(csv_path)
+        except Exception as e:
+            st.error(f"Error reading {csv_path}: {e}")
+            
+    st.warning("⚠️ 'food_database.xlsx' not found in repo root. Please upload it to GitHub!")
+    return pd.DataFrame()
+
+import urllib.parse
+import urllib.request
+import json
+import streamlit as st
+import pandas as pd
+import datetime
+import re
+
+st.set_page_config(
+    page_title="TargetHealth Mobile Tracker",
+    page_icon="📱",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+# Multi-User Accounts
+USERS = {
+    "User 1 (Alex)": "user1pass",
+    "User 2 (Maria)": "user2pass",
     "User 3 (John)": "user3pass",
     "User 4 (Sarah)": "user4pass"
 }
@@ -153,9 +198,13 @@ if "user_weight_history" not in st.session_state:
     st.session_state.user_weight_history = {u: [] for u in USERS.keys()}
 
 def get_combined_db():
-    all_data = INITIAL_FOOD_DATA + st.session_state.custom_foods
-    df = pd.DataFrame(all_data)
-    for col in ["Portion Type", "Hypertension Status", "Purine Level"]:
+    base_df = load_base_database()
+    if not st.session_state.custom_foods:
+        df = base_df.copy()
+    else:
+        custom_df = pd.DataFrame(st.session_state.custom_foods)
+        df = pd.concat([base_df, custom_df], ignore_index=True)
+    for col in ["Portion Type", "Hypertension Status", "Purine Level", "Overall Suitability"]:
         if col not in df.columns:
             df[col] = "Standard"
     return df

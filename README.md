@@ -1,26 +1,14 @@
-# TargetHealth Streamlit App
+# 📱 TargetHealth Mobile Food & Metabolic Tracker
 
-Personalized Metabolic and Dietary Intake Tracker optimized for:
-- HbA1c Target 5.0%
-- Uric Acid Target 5.0 mg/dL
-- Low LDL Cholesterol Target
+Personalized Mobile App for tracking HbA1c 5.0%, Uric Acid 5.0 mg/dL, Low LDL Cholesterol, and DASH Blood Pressure targets.
 
-## Quick Start (Local Run)
+## 📂 Repository Contents
+- **`app.py`**: Main Streamlit application.
+- **`food_database.xlsx`**: Master Food Reference Database in Excel format.
+- **`requirements.txt`**: Required dependencies (`streamlit`, `pandas`, `openpyxl`).
 
-1. Clone or download this repository.
-2. Install dependencies:
-   pip install -r requirements.txt
-3. Run the Streamlit app:
-   streamlit run app.py
-
-## How to Deploy to GitHub and Streamlit Community Cloud
-
-### Step 1: Push to GitHub
-1. Create a new repository on GitHub named targethealth-tracker.
-2. Upload app.py, requirements.txt, and README.md to your repository.
-
-### Step 2: Deploy on Streamlit Cloud
-1. Go to Streamlit Community Cloud and log in with your GitHub account.
-2. Click New App.
-3. Select your repository targethealth-tracker, set Branch to main, and Main file path to app.py.
-4. Click Deploy. Your web app will be live in minutes.
+## ✏️ How to Edit & Add Foods in Excel
+1. Open `food_database.xlsx` in Microsoft Excel, Apple Numbers, or Google Sheets.
+2. Add new rows for any food item, entering calories, carbs/sugar, sodium, potassium, sat fat, purine level, and suitability status.
+3. Save the file and commit/push `food_database.xlsx` to your GitHub repository.
+4. Streamlit Cloud will automatically reload the updated Excel database live on your app!

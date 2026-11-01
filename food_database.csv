@@ -1,0 +1,39 @@
+Category,Food Item,Portion Weight (g),Portion Type,Calories (kcal),Carbs/Sugar (g),GI,Sodium (mg),Potassium (mg),Sat Fat (g),Purine Level,Vitamins & Nutrients,HbA1c Status,Uric Acid Status,Cholesterol Status,Hypertension Status,Overall Suitability
+Vegetables & Greens,Spinach (Raw),100,Cupped Hand / 1 Cup,23,3.6,15,79,558,0.1,Low,"Vit A, C, K, Iron, Folate",Allowed,Allowed,Allowed,Allowed,Allowed
+Vegetables & Greens,Broccoli (Steamed),100,Fist Size / 1 Cup,35,7.2,15,33,316,0.1,Moderate,"Vit C, K, Fiber, Sulforaphane",Allowed,Acceptable,Allowed,Allowed,Allowed
+Vegetables & Greens,Cabbage (Raw / Boiled),100,1 Cup Chopped,25,5.8,15,18,170,0.0,Low,"Vit C, K, Glutamine, Fiber",Allowed,Allowed,Allowed,Allowed,Allowed
+Vegetables & Greens,Kangkong (Water Spinach),100,1 Cup Cooked,19,3.1,15,55,312,0.0,Low,"Vit A, C, Iron, Antioxidants",Allowed,Allowed,Allowed,Allowed,Allowed
+Vegetables & Greens,Pechay (Bok Choy),100,1 Cup Chopped,13,2.2,15,65,252,0.0,Low,"Vit A, C, Calcium, Folate",Allowed,Allowed,Allowed,Allowed,Allowed
+Vegetables & Greens,Potato (Boiled / Baked),100,1 Medium Potato,87,20.1,78,6,379,0.1,Low,"Vit C, Vit B6, Potassium",Not Allowed,Allowed,Allowed,Allowed,Not Allowed
+Vegetables & Greens,Cucumber (With Peel),100,1 Medium Cucumber,15,3.6,15,2,147,0.0,Low,"Vit K, Water, Potassium",Allowed,Allowed,Allowed,Allowed,Allowed
+Vegetables & Greens,Cauliflower (Boiled),100,1 Cup Chopped,23,4.1,15,15,142,0.1,Moderate,"Vit C, K, Choline",Allowed,Acceptable,Allowed,Allowed,Allowed
+Vegetables & Greens,Garlic (Fresh),10,2-3 Cloves,15,3.3,15,2,40,0.0,Zero,"Allicin, S-Allylcysteine",Allowed,Allowed,Allowed,Allowed,Allowed
+Fruits & Berries,Kiwi (Fresh),100,1 Medium Kiwi,61,14.7,52,3,312,0.0,Low,"Vit C (High), Vit K, Fiber",Allowed,Allowed,Allowed,Allowed,Allowed
+Fruits & Berries,Tart Cherries (Fresh),100,1 Handful / 10-12 Cherries,50,12.2,22,0,173,0.1,Low,"Anthocyanins, Vit C",Allowed,Allowed,Allowed,Allowed,Allowed
+Fruits & Berries,Blueberries (Fresh),100,1 Cupped Handful,57,14.5,53,1,77,0.0,Low,"Vit C, K, Manganese, Fiber",Allowed,Allowed,Allowed,Allowed,Allowed
+Fruits & Berries,Green Apple (With Skin),100,1 Medium Apple,52,13.8,36,1,107,0.1,Low,"Pectin Fiber, Vit C",Allowed,Allowed,Allowed,Allowed,Allowed
+Fruits & Berries,Avocado (Fresh),100,1/2 Medium Avocado,160,8.5,15,7,485,2.1,Low,"Monounsaturated Fat, Potassium, Fiber",Allowed,Allowed,Allowed,Allowed,Allowed
+Fruits & Berries,Lemon / Lime Juice,30,2 tbsp / Juice of 1 Lemon,8,2.5,20,1,35,0.0,Zero,"Citrate (Prevents Urate Stones), Vit C",Allowed,Allowed,Allowed,Allowed,Allowed
+Grains & Legumes,Biryani Rice (Spiced Basmati),100,1/2 Cup Cooked,165,28.5,65,240,65,1.2,Low,"Spiced Carbohydrates, Fiber",Acceptable,Allowed,Acceptable,Acceptable,Acceptable
+Grains & Legumes,Atta Flour / Whole Wheat Roti,40,1 Medium Roti,104,20.2,52,2,110,0.2,Low,"Whole Wheat Fiber, B-Vitamins",Allowed,Allowed,Allowed,Allowed,Allowed
+Grains & Legumes,All-Purpose Flour (Maida),100,1 Cup Dry,364,76.3,72,2,107,0.2,Low,Refined Starch,Not Allowed,Allowed,Acceptable,Allowed,Not Allowed
+Grains & Legumes,Pasta (Cooked Whole Wheat),100,1/2 Cup Cooked,124,25.0,42,1,60,0.1,Low,"Complex Fiber, B-Vitamins",Allowed,Allowed,Allowed,Allowed,Allowed
+Grains & Legumes,Steel-Cut Oats (Cooked),100,1/2 Cup Cooked,71,12.0,42,1,70,0.3,Low,"High Beta-Glucan Fiber, B-Vitamins",Allowed,Allowed,Allowed,Allowed,Allowed
+Grains & Legumes,Instant Oats (Cooked),100,1/2 Cup Cooked,82,15.2,66,120,60,0.4,Low,"Processed Oats, Added Sodium",Acceptable,Allowed,Allowed,Acceptable,Acceptable
+Grains & Legumes,Rolled Oats (Cooked),100,1 Cup Cooked / Fist Size,71,12.0,55,1,61,0.3,Low,"Beta-Glucan Fiber, B-Vitamins",Allowed,Allowed,Allowed,Allowed,Allowed
+Grains & Legumes,Lentils (Boiled),100,1/2 Cup Cooked,116,20.1,32,2,369,0.1,Moderate,"Folate, Fiber, Plant Protein",Allowed,Acceptable,Allowed,Allowed,Acceptable
+Grains & Legumes,Quinoa (Cooked),100,1/2 Cup Cooked,120,21.3,53,7,172,0.2,Low,"Magnesium, Iron, Fiber",Allowed,Allowed,Allowed,Allowed,Allowed
+Proteins & Seafood,Beef (Lean Grilled),85,Palm of Hand (3 oz),213,0.0,0,58,290,3.8,High,"Iron, Zinc, Vit B12",Allowed,Not Allowed,Acceptable,Acceptable,Not Allowed
+Proteins & Seafood,Pork (Lean Tenderloin),85,Palm of Hand (3 oz),180,0.0,0,52,330,2.1,Moderate,"Thiamin B1, Vit B6, Selenium",Allowed,Acceptable,Acceptable,Acceptable,Acceptable
+Proteins & Seafood,Tilapia Fillet (Steamed),85,Palm of Hand (3 oz),110,0.0,0,45,320,0.6,Moderate,"Lean Protein, B12, Selenium",Allowed,Acceptable,Allowed,Allowed,Acceptable
+Proteins & Seafood,Tuna (Canned in Water),85,1 Small Can / 3 oz,112,0.0,0,210,200,0.4,High,"Vit D, Vit B12, Lean Protein",Allowed,Not Allowed,Allowed,Acceptable,Not Allowed
+Proteins & Seafood,Chicken Breast (Skinless),85,Palm of Hand (3 oz),140,0.0,0,63,218,0.9,Moderate,"Niacin, Vit B6, Lean Protein",Allowed,Acceptable,Allowed,Allowed,Acceptable
+Proteins & Seafood,Salmon Fillet (Grilled),85,Palm of Hand (3 oz),175,0.0,0,50,309,1.3,Moderate,"Omega-3 EPA/DHA, Vit D",Allowed,Acceptable,Allowed,Allowed,Acceptable
+Eggs & Dairy,Egg White (Boiled),33,1 Large Egg White,17,0.2,0,55,54,0.0,Zero,Pure Ovalbumin Protein,Allowed,Allowed,Allowed,Allowed,Allowed
+Eggs & Dairy,Whole Egg (Boiled),50,1 Large Egg,72,0.4,0,71,69,1.6,Zero,"Choline, Lutein, Vit D",Allowed,Allowed,Acceptable,Allowed,Allowed
+Eggs & Dairy,Non-Fat Greek Yogurt,170,1 Individual Container (6 oz),100,6.1,12,61,240,0.2,Zero,"Probiotics, Calcium, Uric Acid Lowering",Allowed,Allowed,Allowed,Allowed,Allowed
+Nuts & Seeds,Walnuts (Raw),30,1 Small Handful (7 halves),196,4.1,15,1,132,1.8,Low,"ALA Omega-3, Magnesium",Allowed,Allowed,Allowed,Allowed,Allowed
+Nuts & Seeds,Almonds (Unsalted Raw),30,1 Small Handful (23 nuts),173,6.1,15,0,211,1.1,Low,"Vit E, Magnesium, Arginine",Allowed,Allowed,Allowed,Allowed,Allowed
+Beverages & Sweets,Green Tea (Unsweetened),240,1 Mug / Cup,2,0.0,0,2,20,0.0,Zero,"EGCG Catechins, Antioxidants",Allowed,Allowed,Allowed,Allowed,Allowed
+Beverages & Sweets,Black Coffee (Unsweetened),240,1 Mug / Cup,2,0.0,0,5,116,0.0,Zero,Chlorogenic Acid,Allowed,Allowed,Allowed,Allowed,Allowed
+Beverages & Sweets,Extra Virgin Olive Oil,14,1 Tablespoon,119,0.0,0,0,0,1.9,Zero,"Oleic Acid, Polyphenols",Allowed,Allowed,Allowed,Allowed,Allowed
